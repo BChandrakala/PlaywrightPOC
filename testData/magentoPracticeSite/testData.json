@@ -1,0 +1,9 @@
+{
+    "loginPage": {
+        "validEmail": "bchandrakala333@gmail.com",
+        "validPassword": "Chandu@12",
+        "validWelcomeText": "Welcome, Chandrakala Bara!",
+        "inValidEmail": "kala12@gmail.com",
+        "inValidPassword": "123"
+    }
+}
