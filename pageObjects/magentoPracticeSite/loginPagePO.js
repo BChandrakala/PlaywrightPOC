@@ -1,4 +1,4 @@
-const testData = require('../../testData/magentoPracticeSite/testData.json');
+const testData = require('../../utils/testData/magentoPracticeSite/testData.json');
 class LoginPage {
 
     constructor(page)

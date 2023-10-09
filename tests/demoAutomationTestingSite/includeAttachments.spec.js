@@ -68,7 +68,6 @@ test.describe('Include attachments to the report', () => {
  
         // 3. Add the PDF to the report
         const tmpPath = await download.path();
-        // ^ AppData\Local\Temp\playwright-artifacts-KZfOpF\19df2a33-9f96-465a-acb5-3dc1b9041e71
         await testInfo.attach(download.suggestedFilename(), {
             path: tmpPath,
         });

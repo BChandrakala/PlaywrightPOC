@@ -1,8 +1,8 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObjects/magentoPracticeSite/loginPagePO');
-const testData = require('../../testData/magentoPracticeSite/testData.json');
-const constants = require('../../constants/magentoPracticeSite/constants.json');
+const testData = require('../../utils/testData/magentoPracticeSite/testData.json');
+const constants = require('../../utils/constants/magentoPracticeSite/constants.json');
 
 test.beforeEach(async ({ page }) => {
     await page.goto('/');
@@ -17,7 +17,6 @@ test.describe('Login', () => {
     const loginPage = new LoginPage(page);
     await loginPage.signInLink.click();
     await loginPage.login(testData.loginPage['validEmail'], testData.loginPage['validPassword']);
-    page.waitForLoadState('networkidle');
     await expect(loginPage.welcomeText).toHaveText(testData.loginPage['validWelcomeText']);
   });
 
